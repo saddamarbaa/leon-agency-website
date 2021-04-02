@@ -3,6 +3,14 @@
 /******* Start variables *********
 /********** End variables **********/
 
+* {
+	box-sizing: border-box;
+}
+
+body {
+	font-family: "Work Sans", sans-serif;
+}
+
 /********** Start global rules **********/
 
 /********** End global rules **********/
