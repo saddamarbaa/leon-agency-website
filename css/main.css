@@ -1,12 +1,18 @@
 /** @format */
 
-/******* Start variables *********
+/******* Start variables *********/
+:root {
+	--main-color: #10cab7;
+	--main-spaceing: 16px;
+}
 /********** End variables **********/
 
 /********** Start global rules **********/
 
 * {
 	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
 }
 
 body {
@@ -49,6 +55,12 @@ body {
 
 /********** Start Header Section **********/
 
+.header {
+	height: 15vh;
+	min-width: 100%;
+	padding-top: 16px;
+}
+
 .header .container {
 	display: flex;
 	justify-content: space-between;
@@ -68,6 +80,7 @@ body {
 	min-width: 200px;
 	right: 0;
 	top: 90%;
+	z-index: 10;
 }
 
 .header .header-nav-left::before {
@@ -113,3 +126,36 @@ body {
 
 /********** End Header Section **********/
 
+/********** Start Landing Section **********/
+.landing {
+	background: url(../images/landing.jpg) no-repeat center center/cover;
+	height: 85vh;
+	position: relative;
+}
+
+.landing .landing-intro-text {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	width: 320px;
+	max-width: 100%;
+	text-align: center;
+	transform: translate(-50%, -50%);
+	-webkit-transform: translate(-50%, -50%);
+	-moz-transform: translate(-50%, -50%);
+	-ms-transform: translate(-50%, -50%);
+	-o-transform: translate(-50%, -50%);
+}
+
+.landing .landing-intro-text h1 {
+	font-size: 50px;
+	font-weight: bold;
+	color: var(--main-color);
+}
+
+.landing .landing-intro-text p {
+	font-size: 19px;
+	line-height: 1.8;
+}
+
+/********** End Landing Section **********/
