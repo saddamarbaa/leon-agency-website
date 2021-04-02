@@ -14,3 +14,43 @@ body {
 /********** Start global rules **********/
 
 /********** End global rules **********/
+
+.parent {
+	background-color: #eee;
+}
+
+.container {
+	padding-left: 15px;
+	padding-right: 15px;
+	margin-left: auto;
+	margin-right: auto;
+
+	background-color: aqua;
+}
+
+/********** Start media query **********/
+
+/* Apply styles starting from Small devices (landscape phones, 576px ) and up to Medium devices (tablets, 768px) */
+@media (min-width: 576px) and (max-width: 767.98px) {
+}
+
+/* Apply styles starting from medium devices(tablets, 768px) and up to Large devices (desktops, 992px) */
+@media (min-width: 768px) and (max-width: 991.98px) {
+	.container {
+		width: 750px;
+	}
+}
+
+/* Apply styles starting from Large devices (desktops, 992px) and up to X-Large devices (large desktops, 1200px) */
+@media (min-width: 992px) and (max-width: 1199.98px) {
+	.container {
+		width: 970px;
+	}
+}
+
+/* Apply styles starting from X-Large devices (large desktops, 1200px ) and up to XX-Large devices (larger desktops, 1400px and up) */
+@media (min-width: 1200px) and (max-width: 1400px) {
+	.container {
+		width: 1170px;
+	}
+}
