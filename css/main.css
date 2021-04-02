@@ -3,6 +3,8 @@
 /******* Start variables *********
 /********** End variables **********/
 
+/********** Start global rules **********/
+
 * {
 	box-sizing: border-box;
 }
@@ -11,24 +13,12 @@ body {
 	font-family: "Work Sans", sans-serif; /* Google Web Fonts */
 }
 
-/********** Start global rules **********/
-
-/********** End global rules **********/
-
-.parent {
-	background-color: #eee;
-}
-
 .container {
 	padding-left: 15px;
 	padding-right: 15px;
 	margin-left: auto;
 	margin-right: auto;
-
-	background-color: aqua;
 }
-
-/********** Start media query **********/
 
 /* Apply styles starting from Small devices (landscape phones, 576px ) and up to Medium devices (tablets, 768px) */
 @media (min-width: 576px) and (max-width: 767.98px) {
@@ -54,3 +44,71 @@ body {
 		width: 1170px;
 	}
 }
+
+/********** End global rules **********/
+
+/********** Start Header Section **********/
+
+.header .container {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.header .header-logo {
+	width: 70px;
+}
+
+.header .header-nav {
+	position: relative;
+}
+
+.header .header-nav-left {
+	position: absolute;
+	min-width: 200px;
+	right: 0;
+	top: 90%;
+}
+
+.header .header-nav-left:hover .header-nav-left-links {
+	display: block;
+}
+
+.header-nav-left-links {
+	background-color: #f6f6f6;
+	margin-top: 20px;
+	display: none;
+}
+
+.header .header-nav-left a {
+	display: block;
+	text-decoration: none;
+	color: #333;
+	padding: 15px;
+	transition: 0.3s;
+	-webkit-transition: 0.3s;
+	-moz-transition: 0.3s;
+	-ms-transition: 0.3s;
+	-o-transition: 0.3s;
+}
+
+.header .header-nav-left::before {
+	content: "";
+	position: absolute;
+	right: 0px;
+	border-right: 10px solid transparent;
+	border-top: 10px solid transparent;
+	border-bottom: 10px solid #ddd;
+	border-left: 10px solid transparent;
+	top: -10px;
+}
+
+.header .header-nav-left-links a:hover {
+	padding-left: 25px;
+}
+
+.header .header-nav-left-links div:not(:last-child) {
+	border: 1px solid #ddd;
+}
+
+/********** End Header Section **********/
