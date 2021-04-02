@@ -3,14 +3,17 @@
 /******* Start variables *********/
 :root {
 	--main-color: #10cab7;
+	--secondary-color: #2c4755;
 	--space16: 16px;
+	--space19: 19px;
+	--space20: 20px;
+	--space30: 30px;
 	--space60: 60px;
 	--line-height-space: 1.7;
 }
 /********** End variables **********/
 
 /********** Start global rules **********/
-
 * {
 	box-sizing: border-box;
 	padding: 0;
@@ -52,11 +55,9 @@ body {
 		width: 1170px;
 	}
 }
-
 /********** End global rules **********/
 
 /********** Start Header Section **********/
-
 .header {
 	height: 15vh;
 	min-width: 100%;
@@ -125,7 +126,6 @@ body {
 .header .header-nav-left-links div:not(:last-child) {
 	border: 1px solid #ddd;
 }
-
 /********** End Header Section **********/
 
 /********** Start Landing Section **********/
@@ -156,23 +156,22 @@ body {
 }
 
 .landing .landing-intro-text p {
-	font-size: 19px;
+	font-size: var(--space19);
 	line-height: var(--line-height-space);
 }
-
 /********** End Landing Section **********/
 
 /********** Start Features Section **********/
-
 .features {
-	margin-top: var(--space60);
-	margin-bottom: var(--space60);
+	padding-top: var(--space60);
+	padding-bottom: var(--space60);
+	background-color: #f6f6f6f6;
 }
 
 .features .container {
 	display: grid;
 	grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-	grid-gap: 20px;
+	grid-gap: var(--space20);
 }
 
 .features .feat {
@@ -192,7 +191,111 @@ body {
 .features .feat p {
 	line-height: var(--line-height-space);
 	color: #777;
-	font-size: 19px;
+	font-size: var(--space19);
+}
+/********** End Features Section **********/
+
+/********** Start Services Section **********/
+.services {
+	padding-top: var(--space60);
+	padding-bottom: var(--space60);
 }
 
-/********** End Features Section **********/
+.services .services-wrapper {
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+	grid-gap: var(--space30);
+	padding-top: var(--space60);
+}
+
+.services .services-wrapper .servs {
+	display: flex;
+	margin-bottom: var(--space30);
+}
+
+@media screen and (max-width: 768px) {
+	.services .services-wrapper .servs {
+		flex-direction: column;
+		text-align: center;
+	}
+}
+
+.services .services-wrapper .servs .fas {
+	color: var(--main-color);
+	flex-basis: 60px;
+}
+
+.services .services-wrapper .servs .text {
+	flex: 1;
+}
+
+.services .services-wrapper .servs .text h3 {
+	margin: 0 0 20px;
+}
+
+.services .services-wrapper .servs .text p {
+	line-height: var(--line-height-space);
+	color: #444;
+	font-size: var(--space19);
+	font-weight: 300;
+}
+
+.services .services-wrapper .image {
+	text-align: center;
+	position: relative;
+}
+.services .services-wrapper .image img {
+	width: 260px;
+}
+
+.services .services-wrapper .image::before {
+	content: "";
+	position: absolute;
+	background-color: var(--secondary-color);
+	width: 90px;
+	height: calc(100% + 100px) !important;
+	right: 0;
+	top: -50px;
+	z-index: -2;
+}
+
+@media screen and (max-width: 1199px) {
+	.services .services-wrapper .image img.image-colm {
+		display: none;
+	}
+	.services .services-wrapper .image::before {
+		display: none;
+	}
+}
+/********** End Services Section **********/
+
+/********** Start components **********/
+.specail-heading {
+	color: #ebeced;
+	font-size: 100px;
+	text-align: center;
+	font-weight: 800;
+	letter-spacing: -3px;
+	margin: 0;
+}
+
+/* next  select the  next p after (specail-heading ) */
+.specail-heading + p {
+	margin: 0;
+	margin-top: -30px;
+	font-size: var(--space19);
+	text-align: center;
+	color: #797979;
+}
+
+@media screen and (max-width: 768px) {
+	.specail-heading {
+		font-size: 60px;
+	}
+
+	.specail-heading + p {
+		margin: 0;
+		margin-top: -16px;
+	}
+}
+/********** End components **********/
