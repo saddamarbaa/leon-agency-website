@@ -70,6 +70,17 @@ body {
 	top: 90%;
 }
 
+.header .header-nav-left::before {
+	content: "";
+	position: absolute;
+	right: 0px;
+	border-right: 10px solid transparent;
+	border-top: 10px solid transparent;
+	border-bottom: 10px solid #ddd;
+	border-left: 10px solid transparent;
+	top: -10px;
+}
+
 .header .header-nav-left:hover .header-nav-left-links {
 	display: block;
 }
@@ -92,17 +103,6 @@ body {
 	-o-transition: 0.3s;
 }
 
-.header .header-nav-left::before {
-	content: "";
-	position: absolute;
-	right: 0px;
-	border-right: 10px solid transparent;
-	border-top: 10px solid transparent;
-	border-bottom: 10px solid #ddd;
-	border-left: 10px solid transparent;
-	top: -10px;
-}
-
 .header .header-nav-left-links a:hover {
 	padding-left: 25px;
 }
@@ -112,3 +112,4 @@ body {
 }
 
 /********** End Header Section **********/
+
