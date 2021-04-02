@@ -4,6 +4,7 @@
 :root {
 	--main-color: #10cab7;
 	--secondary-color: #2c4755;
+	--section-background: ##f6f6f6;
 	--space16: 16px;
 	--space19: 19px;
 	--space20: 20px;
@@ -102,7 +103,7 @@ body {
 }
 
 .header-nav-left-links {
-	background-color: #f6f6f6;
+	background-color: var(--section-background);
 	margin-top: var(--space16);
 	display: none;
 }
@@ -165,7 +166,7 @@ body {
 .features {
 	padding-top: var(--space60);
 	padding-bottom: var(--space60);
-	background-color: #f6f6f6f6;
+	background-color: var(--section-background);
 }
 
 .features .container {
@@ -185,7 +186,8 @@ body {
 
 .features .feat h3 {
 	font-weight: 800;
-	margin: 30px 0;
+
+	margin: var(--space20) 0;
 }
 
 .features .feat p {
@@ -230,7 +232,7 @@ body {
 }
 
 .services .services-wrapper .servs .text h3 {
-	margin: 0 0 20px;
+	margin: 0 0 var(--space20);
 }
 
 .services .services-wrapper .servs .text p {
@@ -268,6 +270,45 @@ body {
 	}
 }
 /********** End Services Section **********/
+
+/********** Start Portfolio Section **********/
+.portfolio {
+	padding-top: var(--space60);
+	padding-bottom: var(--space60);
+	background-color: var(--section-background);
+}
+
+.portfolio .portfolio-wrapper {
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+	grid-gap: var(--space30);
+	padding-top: var(--space60);
+}
+
+.portfolio .portfolio-wrapper .card {
+	background-color: white;
+}
+
+.portfolio .portfolio-wrapper .card img {
+	max-width: 100%;
+}
+
+.portfolio .portfolio-wrapper .card .info {
+	padding: var(--space20);
+}
+
+.portfolio .portfolio-wrapper .card .info h3 {
+	margin: var(--space20) 0;
+}
+
+.portfolio .portfolio-wrapper .card .info p {
+	line-height: var(--line-height-space);
+	color: #777;
+	font-size: var(--space19);
+	font-weight: 300;
+}
+
+/********** End Portfolio Section **********/
 
 /********** Start components **********/
 .specail-heading {
