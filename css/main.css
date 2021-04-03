@@ -10,6 +10,7 @@
 	--space20: 20px;
 	--space30: 30px;
 	--space60: 60px;
+	--space100: 100px;
 	--line-height-space: 1.7;
 }
 /********** End variables **********/
@@ -176,7 +177,7 @@ body {
 }
 
 .features .feat {
-	padding: var(--main-spaceing);
+	padding: var(--space20);
 	text-align: center;
 }
 
@@ -186,7 +187,6 @@ body {
 
 .features .feat h3 {
 	font-weight: 800;
-
 	margin: var(--space20) 0;
 }
 
@@ -207,7 +207,7 @@ body {
 	display: grid;
 	grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
 	grid-gap: var(--space30);
-	padding-top: var(--space60);
+	padding-top: var(--space100);
 }
 
 .services .services-wrapper .servs {
@@ -282,7 +282,7 @@ body {
 	display: grid;
 	grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
 	grid-gap: var(--space30);
-	padding-top: var(--space60);
+	padding-top: var(--space100);
 }
 
 .portfolio .portfolio-wrapper .card {
@@ -309,6 +309,106 @@ body {
 }
 
 /********** End Portfolio Section **********/
+
+/********** Start about Section **********/
+.about {
+	padding-top: var(--space60);
+	padding-bottom: var(--space100);
+}
+
+.about .about-wrapper {
+	margin-top: var(--space100);
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+
+@media screen and (max-width: 991px) {
+	.about .about-wrapper {
+		flex-direction: column;
+		text-align: center;
+	}
+}
+
+.about .about-wrapper .image {
+	position: relative;
+	width: 220px;
+	height: 280px;
+}
+
+@media screen and (max-width: 991px) {
+	.about .about-wrapper .image {
+		margin: 0 auto;
+		margin-bottom: calc(var(--space20) + var(--space20));
+	}
+}
+
+.about .about-wrapper .image img {
+	max-width: 100%;
+	height: 100%;
+}
+
+.about .about-wrapper .image::before {
+	content: "";
+	position: absolute;
+	background: #ebeced;
+	width: 100px;
+	height: calc(100% + 80px);
+	left: -20px !important;
+	top: -40px;
+	z-index: -2;
+}
+
+.about .about-wrapper .image::after {
+	content: "";
+	position: absolute;
+	width: 100px;
+	height: 80%;
+	top: -40px;
+	left: 65%;
+	z-index: -3;
+	border-left: 70px solid var(--main-color);
+	border-bottom: 70px solid var(--main-color);
+}
+
+@media screen and (max-width: 991px) {
+	.about .about-wrapper .image::after,
+	.about .about-wrapper .image::before {
+		display: none;
+	}
+}
+
+.about .about-wrapper .text {
+	flex-basis: calc(100% - 400px);
+}
+
+.about .about-wrapper .text {
+	flex-basis: calc(100% - 400px);
+}
+
+.about .about-wrapper .text p:first-of-type {
+	font-weight: bold;
+	line-height: 2;
+	margin-bottom: calc(var(--space20) + var(--space20));
+}
+
+.about .about-wrapper .text p:last-of-type {
+	margin-top: calc(var(--space20) + var(--space20));
+	line-height: var(--line-height-space);
+	color: #777;
+	font-size: var(--space19);
+	font-weight: 300;
+}
+
+.about .about-wrapper .text hr {
+	width: 50%;
+	display: inline-block;
+	border-color: var(--main-color);
+	/* color: var(--main-color); */
+}
+
+/********** End about Section **********/
 
 /********** Start components **********/
 .specail-heading {
