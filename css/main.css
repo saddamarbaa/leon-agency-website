@@ -1,6 +1,13 @@
-/** @format */
+/**
+ *
+ *  @format
+ *  main.css
+ *  These are the final styles for the project.
+ *  Author: Saddam Arbaa
+ */
 
-/******* Start variables *********/
+/* **** Start variables ********/
+
 :root {
 	--main-color: #10cab7;
 	--secondary-color: #2c4755;
@@ -93,22 +100,6 @@ body {
 	top: 100%;
 	z-index: 10;
 }
-
-/* .header .header-nav-left::before {
-	content: "";
-	position: absolute;
-	right: 50%;
-	border-right: 10px solid transparent;
-	border-top: 10px solid transparent;
-	border-bottom: 10px solid #ddd;
-	border-left: 10px solid transparent;
-	top: -4px;
-} */
-
-/* .header .header-nav-left:hover .header-nav-left-links {
-	display: none;
-	opacity: 0;
-} */
 
 .header-nav-left-links {
 	background-color: var(--section-background);
@@ -575,12 +566,3 @@ body {
 	opacity: 1;
 }
 /********** End components **********/
-.test .container {
-	display: flex;
-	justify-content: space-around;
-	align-items: center;
-	height: 100px;
-	background: lightcoral;
-	color: black;
-	font-size: 24px;
-}
