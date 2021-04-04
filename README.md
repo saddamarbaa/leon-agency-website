@@ -8,15 +8,22 @@ in this project, I Learned more about modern CSS features and techniques includi
 
 ### responsive on large screens
 
-![image](https://user-images.githubusercontent.com/51326421/103206736-1cc69900-492f-11eb-93cb-3d60d810a87d.png)
+![image](https://user-images.githubusercontent.com/51326421/113509527-53402f80-9580-11eb-8981-9c2b47a0fdd1.png)
+
 
 
 ### responsive on mobile and tablet screens
 
-![image](https://user-images.githubusercontent.com/51326421/103206415-6367c380-492e-11eb-8737-ceda576b5060.png)
+![image](https://user-images.githubusercontent.com/51326421/113509561-900c2680-9580-11eb-9d15-eb14d58468b8.png)
 
 
 
 ### responsive on small mobile screens
 
-![image](https://user-images.githubusercontent.com/51326421/103206168-cc9b0700-492d-11eb-9d6c-659e32ea8185.png)
+
+
+
+
+![image](https://user-images.githubusercontent.com/51326421/113509605-b0d47c00-9580-11eb-95ef-220fe5a23ccd.png)
+
+
