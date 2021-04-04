@@ -223,9 +223,12 @@ body {
 	}
 }
 
+.services .services-wrapper .servs menu {
+	flex-basis: 60px;
+}
+
 .services .services-wrapper .servs .fas {
 	color: var(--main-color);
-	flex-basis: 60px;
 }
 
 .services .services-wrapper .servs .text {
