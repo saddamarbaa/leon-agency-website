@@ -4,12 +4,13 @@
 :root {
 	--main-color: #10cab7;
 	--secondary-color: #2c4755;
-	--section-background: ##f6f6f6;
+	--section-background: #f6f6f6;
 	--space16: 16px;
 	--space19: 19px;
 	--space20: 20px;
 	--space30: 30px;
 	--space60: 60px;
+	--space70: 70px;
 	--space100: 100px;
 	--line-height-space: 1.7;
 }
@@ -20,6 +21,10 @@
 	box-sizing: border-box;
 	padding: 0;
 	margin: 0;
+}
+
+html {
+	scroll-behavior: smooth;
 }
 
 body {
@@ -73,7 +78,7 @@ body {
 }
 
 .header .header-logo {
-	width: 70px;
+	width: var(--space70);
 }
 
 .header .header-nav {
@@ -123,6 +128,7 @@ body {
 
 .header .header-nav-left-links a:hover {
 	padding-left: 25px;
+	background-color: var(--main-color);
 }
 
 .header .header-nav-left-links div:not(:last-child) {
@@ -407,8 +413,84 @@ body {
 	border-color: var(--main-color);
 	/* color: var(--main-color); */
 }
-
 /********** End about Section **********/
+
+/********** Start Contact Section **********/
+.contact {
+	padding-top: var(--space60);
+	padding-bottom: var(--space60);
+	background-color: var(--section-background);
+}
+
+.contact .info {
+	padding-top: var(--space60);
+	padding-bottom: var(--space60);
+	text-align: center;
+}
+
+.contact .info .label {
+	font-size: var(--space30);
+	font-weight: 800;
+	color: var(--secondary-color);
+	letter-spacing: -1px;
+	margin-bottom: var(--space16);
+}
+
+.contact .info .link {
+	display: block;
+	font-size: var(--space30);
+	color: var(--main-color);
+	font-weight: 800;
+	text-decoration: none;
+	margin-bottom: var(--space16);
+}
+
+.contact .info .social {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	font-size: var(--space20);
+}
+
+.contact .info .social i {
+	margin-left: var(--space16);
+	color: var(--secondary-color);
+}
+
+.contact .info .social i:hover {
+	color: var(--main-color);
+}
+
+@media screen and (max-width: 576px) {
+	.contact .info .label,
+	.contact .info .link {
+		font-size: calc(var(--space20) + 5px);
+	}
+
+	.contact .info .social {
+		font-size: var(--space16);
+	}
+}
+/********** End Contact Section **********/
+
+/********** Start Footer Section **********/
+.footer {
+	background-color: var(--secondary-color);
+	color: white;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 50px;
+	padding-top: var(--space60);
+	padding-bottom: var(--space60);
+}
+
+.footer span {
+	font-weight: bold;
+	color: var(--main-color);
+	padding: 0 5px;
+}
+/********** End Footer Section **********/
 
 /********** Start components **********/
 .specail-heading {
