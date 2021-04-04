@@ -13,6 +13,7 @@
 	--space70: 70px;
 	--space100: 100px;
 	--line-height-space: 1.7;
+	--transition-duration: 0.5s;
 }
 /********** End variables **********/
 
@@ -87,31 +88,33 @@ body {
 
 .header .header-nav-left {
 	position: absolute;
-	min-width: 200px;
-	right: 0;
-	top: 90%;
+	min-width: 230px;
+	right: 0px;
+	top: 100%;
 	z-index: 10;
 }
 
-.header .header-nav-left::before {
+/* .header .header-nav-left::before {
 	content: "";
 	position: absolute;
-	right: 0px;
+	right: 50%;
 	border-right: 10px solid transparent;
 	border-top: 10px solid transparent;
 	border-bottom: 10px solid #ddd;
 	border-left: 10px solid transparent;
-	top: -10px;
-}
+	top: -4px;
+} */
 
-.header .header-nav-left:hover .header-nav-left-links {
-	display: block;
-}
+/* .header .header-nav-left:hover .header-nav-left-links {
+	display: none;
+	opacity: 0;
+} */
 
 .header-nav-left-links {
 	background-color: var(--section-background);
 	margin-top: var(--space16);
 	display: none;
+	opacity: 0;
 }
 
 .header .header-nav-left a {
@@ -119,11 +122,12 @@ body {
 	text-decoration: none;
 	color: #333;
 	padding: var(--space16);
-	transition: 0.3s;
-	-webkit-transition: 0.3s;
-	-moz-transition: 0.3s;
-	-ms-transition: 0.3s;
-	-o-transition: 0.3s;
+	transition: var(--transition-duration);
+	-webkit-transition: var(--transition-duration);
+	-moz-transition: var(--transition-duration);
+	-ms-transition: var(--transition-duration);
+	-o-transition: var(--transition-duration);
+	cursor: pointer;
 }
 
 .header .header-nav-left-links a:hover {
@@ -455,6 +459,12 @@ body {
 .contact .info .social i {
 	margin-left: var(--space16);
 	color: var(--secondary-color);
+	transition: var(--transition-duration);
+	-webkit-transition: var(--transition-duration);
+	-moz-transition: var(--transition-duration);
+	-ms-transition: var(--transition-duration);
+	-o-transition: var(--transition-duration);
+	cursor: pointer;
 }
 
 .contact .info .social i:hover {
@@ -492,6 +502,40 @@ body {
 }
 /********** End Footer Section **********/
 
+/********** Start Scroll Top **********/
+.back-to-top {
+	cursor: pointer;
+	position: fixed;
+	bottom: 40px;
+	right: 5px;
+	width: 40px;
+	height: 40px;
+	background: var(--main-color);
+	border-radius: 50%;
+	-webkit-border-radius: 50%;
+	-moz-border-radius: 50%;
+	-ms-border-radius: 50%;
+	-o-border-radius: 50%;
+	border: 0;
+	outline: 0;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.back-to-top svg {
+	fill: #fff;
+	width: 12px;
+	height: auto;
+}
+
+@media (max-width: 576px) {
+	.back-to-top {
+		bottom: 90px;
+	}
+}
+/********** End Scroll Top **********/
+
 /********** Start components **********/
 .specail-heading {
 	color: #ebeced;
@@ -521,32 +565,22 @@ body {
 		margin-top: -16px;
 	}
 }
+
+.hid {
+	display: none;
+}
+
+.show {
+	display: block;
+	opacity: 1;
+}
 /********** End components **********/
-
-/********** Start Scroll Top **********/
-.back-to-top {
-	cursor: pointer;
-	position: fixed;
-	bottom: 40px;
-	right: 5px;
-	width: 40px;
-	height: 40px;
-	background: var(--main-color);
-	border-radius: 50%;
-	-webkit-border-radius: 50%;
-	-moz-border-radius: 50%;
-	-ms-border-radius: 50%;
-	-o-border-radius: 50%;
-	border: 0;
-	outline: 0;
+.test .container {
 	display: flex;
+	justify-content: space-around;
 	align-items: center;
-	justify-content: center;
+	height: 100px;
+	background: lightcoral;
+	color: black;
+	font-size: 24px;
 }
-
-.back-to-top svg {
-	fill: #fff;
-	width: 12px;
-	height: auto;
-}
-/********** End Scroll Top **********/
