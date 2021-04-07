@@ -1,4 +1,4 @@
-# leon-agency-template Clone( HTML5/CSS)
+# leon-agency-template ( HTML5/CSS)
 
 This is a code repository for building:Léon Agency Website from scratch a responsive 
 layout "Mobile First Design" using HTML5/CSS and a bit of JS for the menu.
