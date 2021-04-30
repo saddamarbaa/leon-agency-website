@@ -4,7 +4,11 @@ This is a code repository for building:Léon Agency Website from scratch a respo
 layout "Mobile First Design" using HTML5/CSS and a bit of JS for the menu.
 in this project, I Learned more about modern CSS features and techniques including CSS grid, flexbox, and responsive media queries
 
-### <a href="https://saddamarbaa.github.io/leon-agency-website/">LIVE DEMO</a>
+
+### <a href="https://agency-website-template.netlify.app/">LIVE DEMO</a>
+
+
+### <a href="https://saddamarbaa.github.io/leon-agency-website/">GitHub Pages DEMO</a>
 
 ### responsive on large screens
 
